@@ -1,5 +1,5 @@
 # Wordie
-a word game created by Reecy 💖
+a word game designed by Luta and implemented by me.
 
 ## resources
 
