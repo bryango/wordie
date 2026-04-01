@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/space-before-function-paren */
 /* eslint-disable padded-blocks */
 const HINT_PREFIX_LENGTH = 2;
-const THE_BEGINNING = new Date('2021-12-24T00:00:00+10:00').valueOf();
+// const THE_BEGINNING = new Date('2021-12-24T00:00:00+10:00').valueOf()
 const PRESET_ANSWER = new URL(document.location.href).searchParams.get('answer');
 if (PRESET_ANSWER === null || PRESET_ANSWER === '') {
     fetch('./res/wordslist.txt')
@@ -18,15 +18,17 @@ Array.prototype.random = function () {
     return this[Math.floor(Math.random() * this.length)];
 };
 function setup(word) {
-    const counter = document.getElementById('counter');
-    counter.innerText =
-        Math.floor((Date.now() - THE_BEGINNING) / (1000 * 60 * 60 * 24)).toFixed();
-    if (new Date().toDateString().endsWith('Aug 22 2023')) {
-        counter.innerText = '七夕 🌠 ' + counter.innerText;
-    }
-    if (new Date().toDateString().endsWith('Feb 14 2024')) {
-        counter.innerText = '情人节 💕 ' + counter.innerText;
-    }
+    // const counter = document.getElementById('counter') as HTMLElement
+    // counter.innerText =
+    //   Math.floor(
+    //     (Date.now() - THE_BEGINNING) / (1000 * 60 * 60 * 24)
+    //   ).toFixed()
+    // if (new Date().toDateString().endsWith('Aug 22 2023')) {
+    //   counter.innerText = '七夕 🌠 ' + counter.innerText
+    // }
+    // if (new Date().toDateString().endsWith('Feb 14 2024')) {
+    //   counter.innerText = '情人节 💕 ' + counter.innerText
+    // }
     document.getElementById('secret').innerText =
         word;
     document.getElementById('guess').value =
